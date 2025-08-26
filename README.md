@@ -1,22 +1,10 @@
-# 🌟 Sentimental Analysis   
+# Sentimental Analysis   
 
 A **Flask-powered web application** that performs **sentiment analysis** on user-input text.  
 The app uses **Machine Learning (scikit-learn)** and **Natural Language Processing (NLTK)** to classify text as **Positive, Negative, or Neutral**.  
 
----
-
-## 🚀 Demo Output  
-
-<p align="center">
-  <img src="./static/interface_sample.png" alt="Sentiment Analysis Web App UI" width="600">
-</p>  
-
-*User enters a comment → app preprocesses the text → model predicts sentiment → result is shown instantly on the interface.*
-
----
-
-## 📂 Project Structure  
-
+## Project Structure  
+```
 Sentimental_Analysis/
 │
 ├── app.py # Flask application (main entry point)
