@@ -15,7 +15,7 @@ Sentimental_Analysis/
 │ └── index.html # Frontend template (user interface)
 ├── static/ # (Optional) CSS / images for styling
 └── Sentiment Analysis.ipynb # Jupyter Notebook (model training)
-
+```
 ---
 
 ## Features  
@@ -51,58 +51,57 @@ pip install -r requirements.txt
 **Run the App**
 python App.py
 ➡ Open your browser and go to: http://127.0.0.1:5000/
-
+```
 ---
 
-## 🔍 How It Works  
+## How It Works  
 
 The application workflow is divided into the following steps:  
 
-### 📝 1. Input  
+### 1. Input  
 - User submits a comment or text through the web form.  
 
-### 🧹 2. Preprocessing  
+### 2. Preprocessing  
 - Convert text to lowercase and remove unwanted characters  
 - Remove stopwords (using **NLTK**)  
 - Apply stemming (**PorterStemmer**)  
 
-### 🔡 3. Vectorization  
+### 3. Vectorization  
 - Convert cleaned text into numerical features using **TF-IDF vectorizer** (`tfidf.pkl`)  
 
-### 🤖 4. Prediction  
+### 4. Prediction  
 - Pre-trained classifier (`clf.pkl`) predicts the sentiment label (Positive / Negative / Neutral)  
 
-### 📤 5. Output  
+### 5. Output  
 - Predicted sentiment is displayed back on the webpage in real time  
 
 
-## 📊 Model Training (Notebook)  
+## Model Training (Notebook)  
 
 The Jupyter Notebook covers the following stages:  
 
-### 📂 1. Data Preparation  
+### 1. Data Preparation  
 - Load dataset  
 - Explore text samples and labels  
 
-### 🧹 2. Preprocessing  
+###  2. Preprocessing  
 - Tokenization & stopword removal  
 - Stemming / normalization  
 
-### 🔡 3. Feature Engineering  
+### 3. Feature Engineering  
 - Convert text into vectors using **TF-IDF**  
 
-### 🏋️ 4. Model Training  
+### 4. Model Training  
 - Train models such as **Logistic Regression** or **Naive Bayes**  
 
-### 📈 5. Evaluation  
+### 5. Evaluation  
 - Measure **Accuracy, Precision, Recall, and F1-score**  
 
-### 💾 6. Saving Artifacts  
+### 6. Saving Artifacts  
 - Save trained model → `clf.pkl`  
 - Save TF-IDF vectorizer → `tfidf.pkl`  
 
-## 📸 Example Output  
-
+## Example Output  
 ### Input:  
 "I really love this product, it's amazing!"
 
