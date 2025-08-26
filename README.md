@@ -54,58 +54,57 @@ python App.py
 
 ---
 
-## How It Works
+## 🔍 How It Works  
 
-Input: User submits a comment through the web form.
+The application workflow is divided into the following steps:  
 
-Preprocessing:
+### 📝 1. Input  
+- User submits a comment or text through the web form.  
 
-Lowercasing & cleaning
+### 🧹 2. Preprocessing  
+- Convert text to lowercase and remove unwanted characters  
+- Remove stopwords (using **NLTK**)  
+- Apply stemming (**PorterStemmer**)  
 
-Stopword removal (using NLTK)
+### 🔡 3. Vectorization  
+- Convert cleaned text into numerical features using **TF-IDF vectorizer** (`tfidf.pkl`)  
 
-Word stemming (PorterStemmer)
+### 🤖 4. Prediction  
+- Pre-trained classifier (`clf.pkl`) predicts the sentiment label (Positive / Negative / Neutral)  
 
-Vectorization: Text is converted into numerical features using TF-IDF.
+### 📤 5. Output  
+- Predicted sentiment is displayed back on the webpage in real time  
 
-Prediction: Pre-trained classifier (clf.pkl) predicts sentiment label.
 
-Output: Sentiment result is displayed back on the webpage.
+## 📊 Model Training (Notebook)  
 
-📊 Model Training (Notebook)
+The Jupyter Notebook covers the following stages:  
 
-The Jupyter notebook includes:
+### 📂 1. Data Preparation  
+- Load dataset  
+- Explore text samples and labels  
 
-Dataset loading & exploration
+### 🧹 2. Preprocessing  
+- Tokenization & stopword removal  
+- Stemming / normalization  
 
-Text preprocessing pipeline
+### 🔡 3. Feature Engineering  
+- Convert text into vectors using **TF-IDF**  
 
-TF-IDF feature engineering
+### 🏋️ 4. Model Training  
+- Train models such as **Logistic Regression** or **Naive Bayes**  
 
-Model training (Logistic Regression / Naive Bayes)
+### 📈 5. Evaluation  
+- Measure **Accuracy, Precision, Recall, and F1-score**  
 
-Performance evaluation (Accuracy, Precision, Recall, F1)
+### 💾 6. Saving Artifacts  
+- Save trained model → `clf.pkl`  
+- Save TF-IDF vectorizer → `tfidf.pkl`  
 
-Saving model (clf.pkl) & vectorizer (tfidf.pkl)
+## 📸 Example Output  
 
-🌱 Future Enhancements
-
-📌 Add sentiment confidence score (e.g., probability output)
-
-🌍 Extend to multilingual sentiment analysis
-
-🎨 Improve UI with Bootstrap / TailwindCSS
-
-☁️ Deploy on Heroku / Render / Railway for public access
-
-🤖 Add deep learning model (LSTM / BERT) for better accuracy
-
-📸 Example Output
-
-Input:
-
+### Input:  
 "I really love this product, it's amazing!"
 
-Output:
-
+### Output:  
 ✅ Sentiment: Positive
