@@ -18,7 +18,7 @@ Sentimental_Analysis/
 
 ---
 
-## 🎯 Features  
+## Features  
 
 ✅ Simple web-based interface to analyze text sentiment  
 ✅ Preprocessing with **NLTK** (stopword removal, stemming, cleaning)  
@@ -28,7 +28,7 @@ Sentimental_Analysis/
 
 ---
 
-## 🛠️ Tech Stack  
+## Tech Stack  
 
 - **Python 3.8+**  
 - **Flask** (backend web framework)  
@@ -38,7 +38,7 @@ Sentimental_Analysis/
 
 ---
 
-## 📥 Clone the Repository  
+## Clone the Repository  
 
 To get a copy of this project locally:  
 
@@ -51,3 +51,61 @@ pip install -r requirements.txt
 **Run the App**
 python App.py
 ➡ Open your browser and go to: http://127.0.0.1:5000/
+
+---
+
+## How It Works
+
+Input: User submits a comment through the web form.
+
+Preprocessing:
+
+Lowercasing & cleaning
+
+Stopword removal (using NLTK)
+
+Word stemming (PorterStemmer)
+
+Vectorization: Text is converted into numerical features using TF-IDF.
+
+Prediction: Pre-trained classifier (clf.pkl) predicts sentiment label.
+
+Output: Sentiment result is displayed back on the webpage.
+
+📊 Model Training (Notebook)
+
+The Jupyter notebook includes:
+
+Dataset loading & exploration
+
+Text preprocessing pipeline
+
+TF-IDF feature engineering
+
+Model training (Logistic Regression / Naive Bayes)
+
+Performance evaluation (Accuracy, Precision, Recall, F1)
+
+Saving model (clf.pkl) & vectorizer (tfidf.pkl)
+
+🌱 Future Enhancements
+
+📌 Add sentiment confidence score (e.g., probability output)
+
+🌍 Extend to multilingual sentiment analysis
+
+🎨 Improve UI with Bootstrap / TailwindCSS
+
+☁️ Deploy on Heroku / Render / Railway for public access
+
+🤖 Add deep learning model (LSTM / BERT) for better accuracy
+
+📸 Example Output
+
+Input:
+
+"I really love this product, it's amazing!"
+
+Output:
+
+✅ Sentiment: Positive
